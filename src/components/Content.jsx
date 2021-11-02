@@ -50,10 +50,13 @@ class Content extends React.Component {
 
   handleStart = () => {
     this.clockRef.start();
+    this.setState({
+      timer: true,
+    })
   }
 
   handlePause = () => {
-    this.clockRef.pause();
+    this.clockRef.isPaused() ? this.clockRef.start() : this.clockRef.pause();
   }
 
   handleStop =() => {
@@ -93,7 +96,7 @@ class Content extends React.Component {
       totalTime,
       timer,
     } = this.state;
-  
+
     return (
     <div className="contentInput">
       <div className="inputs">
@@ -126,7 +129,6 @@ class Content extends React.Component {
         autoStart={false}
         controlled={false}
         ref={this.setClockRef}
-        onStart={this.handleOnStart}
         onStop={this.hadleOnStop}
         onComplete={this.playAudio}
         renderer={props => <div className="timer">{zeroPad(props.hours)}:{zeroPad(props.minutes)}:{zeroPad(props.seconds)}</div>}
@@ -134,7 +136,7 @@ class Content extends React.Component {
       <div className="buttons">
         <button onClick={ this.remUm }>-1</button>
         <button onClick={ this.handleStart }>Start</button>
-        <button onClick={ this.handlePause }>Pause</button>
+        <button onClick={ this.handlePause }>Pause / Resume</button>
         <button onClick={ this.handleStop }>Stop</button>
         <button onClick={ this.addUm }>+1</button>
       </div>
