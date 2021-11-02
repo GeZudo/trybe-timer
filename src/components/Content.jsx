@@ -23,6 +23,12 @@ class Content extends React.Component {
     })
   }
 
+  hadleOnStop = () => {
+    this.setState({
+      timer: false,
+    })
+  }
+
   handleChange = ({ target }) => {
     const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -121,6 +127,7 @@ class Content extends React.Component {
         controlled={false}
         ref={this.setClockRef}
         onStart={this.handleOnStart}
+        onStop={this.hadleOnStop}
         onComplete={this.playAudio}
         renderer={props => <div className="timer">{zeroPad(props.hours)}:{zeroPad(props.minutes)}:{zeroPad(props.seconds)}</div>}
       />
