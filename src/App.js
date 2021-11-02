@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Content from './components/Content';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    render(){
+      return (
+        <div className="App">
+          {/* <div className="video-container">
+            <iframe src="https://www.youtube.com/embed/m4P9XkF9gsI?controls=0&autoplay=1&mute=1&playlist=m4P9XkF9gsI&loop=1" title="youtube-bg"></iframe>
+          </div> */}
+          <video autoPlay muted loop className="video-container">
+            <source src="./bg.mp4" type="video/mp4"></source>
+          </video>
+          <div className="content">
+            <Content />
+          </div>
+        </div>
+      );
+    }
 }
 
 export default App;
