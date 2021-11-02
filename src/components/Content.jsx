@@ -17,12 +17,6 @@ class Content extends React.Component {
     this.audio = new Audio(this.bell)
   }
 
-  handleOnStart = () => {
-    this.setState({
-      timer: true,
-    })
-  }
-
   hadleOnStop = () => {
     this.setState({
       timer: false,
