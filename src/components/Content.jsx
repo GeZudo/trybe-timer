@@ -10,7 +10,7 @@ class Content extends React.Component {
       inputHours: 0,
       inputMinutes: 0,
       inputSeconds: 0,
-      totalTime: 0,
+      totalTime: 402000,
       timer: false,
     };
     this.bell = "https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"
