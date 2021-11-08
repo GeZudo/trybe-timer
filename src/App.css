@@ -20,6 +20,7 @@ input {
   padding: 20px;
   position: absolute;
   color: #FFFFFF;
+  max-width: 80%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -36,6 +37,7 @@ input {
   padding-top: 10px;
   font-family: 'Press Start 2P', cursive;
   font-size: 60px;
+  max-width: 100%;
 }
 
 .inputs {
@@ -45,6 +47,34 @@ input {
 
 .timer-video {
   padding-top: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .timer {
+    font-size: xx-large;
+  }
+}
+
+@media only screen and (max-width:610px) {
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  }  
+}
+
+@media only screen and (max-width: 1245px){
+  .inputHours{
+    display: flex;
+    flex-direction: column;
+  }
+  .inputMinutes{
+    display: flex;
+    flex-direction: column;
+  }
+  .inputSeconds{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (min-aspect-ratio: 16/9) {
