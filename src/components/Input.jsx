@@ -27,10 +27,10 @@ class Input extends React.Component {
               <input
                 id={ labelText }
                 type={ formType }
-                name={ name }
-                className={ name }
-                onChange={ onChange }
-                value={ value }
+                name={ name}
+                className={name}
+                onChange={onChange}
+                value={value}
                 min={0}
               />
             </label>)}
