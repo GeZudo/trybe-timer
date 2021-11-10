@@ -22,7 +22,7 @@ class CollapseMenu extends React.Component {
     } = this.state;
 
     return(
-      <div className={ collapsed ? 'collapsed show' : 'collapsed' }>
+      <div className={ collapsed ? 'collapsed show' : 'collapsed noShow' }>
         <IoIosArrowDroprightCircle onClick={ this.hadleClick } className={ collapsed ? 'collapseShow' : 'collapseNoShow' }/>
         <a href="https://www.linkedin.com/in/augusto-malves/" target="_blank" rel="noreferrer" className="item">
           <IoLogoLinkedin />

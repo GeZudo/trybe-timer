@@ -18,23 +18,23 @@ svg {
   background-color: #00000067;
   backdrop-filter: blur(10px);
   overflow: hidden;
-  min-width: 60px;
+  width: 60px;
   height: 60px;
   top: 93%;
   left: 0%;
-  transition: all 500ms;
+  transition: ease 500ms;
 }
 
-.collapseNoShow {
+.collapseNoShow, .collapseShow {
+  min-width: 60px;
   transition: all 500ms;
 }
 
 .collapseShow {
-  transition: all 500ms;
   transform: rotate(180deg);
 }
 
-.item {
+.collapsed.noShow .item {
   display: none;
 }
 
@@ -43,8 +43,13 @@ svg {
 }
 
 .collapsed.show {
+  width: 180px;
   transition: all 500ms;
-  min-width: 180px;
+}
+
+.collapsed.noShow {
+  min-width: 60px;
+  transition: all 500ms;
 }
 
 .video-container{
