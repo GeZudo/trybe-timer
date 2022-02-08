@@ -3,7 +3,7 @@
 
 Desafio proposto pelo curso da [Trybe](https://betrybe.com) em que deveria ser criado um timer simples que seria utilizado durante as aulas de front-end
 
-Nele é possivel selecionar um tempo para começar um timer, pausar, voltar de onde estava e cancelar o timer a qualquer momento!
+Nele é possível selecionar um tempo para começar um timer, pausar, voltar de onde estava e cancelar o timer a qualquer momento!
 
 ## Stack utilizada
 
